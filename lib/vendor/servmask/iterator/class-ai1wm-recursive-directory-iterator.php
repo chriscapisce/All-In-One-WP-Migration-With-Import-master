@@ -32,14 +32,14 @@ class Ai1wm_Recursive_Directory_Iterator extends RecursiveDirectoryIterator {
 		$this->skipdots();
 	}
 
-	public function rewind() {
+	public function rewind(): void {
 		parent::rewind();
 
 		// Skip current and parent directory
 		$this->skipdots();
 	}
 
-	public function next() {
+	public function next(): void {
 		parent::next();
 
 		// Skip current and parent directory
@@ -54,7 +54,7 @@ class Ai1wm_Recursive_Directory_Iterator extends RecursiveDirectoryIterator {
 	 *
 	 * @return bool
 	 */
-	public function hasChildren( $allow_links = true ) {
+	public function hasChildren( $allow_links = true ): bool {
 		return parent::hasChildren( $allow_links );
 	}
 
